@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<title> Site de angus Malara-Mehnaoui</title>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+<div id="entete-de-page"> 
+<p> site d'Angus <br/> </p>
+</div> 
+
+<table id="bloc-menu" border="1">
+<tr>
+<th><a href="index.html"> Accueil </a></th>
+<th><a href="productions.html">Productions scolaires </a></th>
+<th><a href="passions.html">Mes Passions</a></th>
+<th><a href="videos.html">Mes Vidéos</a></th>
+<th><a href="site.html">Mon site de rêve</a></th>
+
+</tr>
+</table> <br/> 
+
+<div id="contenu">
+<h1> ACCUEIL </h1></div>
+<img src="avatar.png" alt="mon_avatar" height="10%" width="10%"class="arrondie">   
+<h2>Je me présente en quelques mots ...</h2>
+<p> Je m'appelle Angus Malara-Mehnaoui. Je suis né le 30 décembre 2010, j'ai 15 ans.
+Je suis élève au lycée Sacré-coeur à Tourcoing, le même que celui de ma grande soeur Angel qui est en terminale. Je suis une personne plutôt sympa et rigolote quand on veut bien me donner une chance de me connaître. 
+Si l'environnement est positif, ça me donne envie d'aller vers les gens car je suis d'un naturel sociable. J'apprécie la musique et le cinéma. Plus tard, si je ne change pas d'avis entre temps, j'aimerais m'orienter
+vers des études de kinésithérapie. </p>
+<hr>
+<div> 
+<audio  id="zic"src="music.mp3"></audio>
+<!--on nomme les boutons et leur statut -->
+<div>
+<a href="javascript:void(0)" onclick="changeState(0)" class="bouton">PLAY</a>
+<a href="javascript:void(0)" onclick="changeState(1)" class="bouton">PAUSE</a>
+<a href="javascript:void(0)" onclick="changeState(2)" class="bouton active">STOP</a>
+</div>
+<!--on écrit les variable du script -->
+<script>
+<!--on attribue valeur et fonction de chaque bouton -->
+function changeState(x){
+let boutons = document.querySelectorAll(".bouton");
+let audio = document.querySelector("#zic");
+for(let i =0; i<boutons.length; i++){
+boutons[i].classList.remove("active");
+}
+boutons[x].classList.add("active");
+if(x == 0){
+audio.play();
+}
+if(x == 1){
+audio.pause();
+}
+if(x == 2){
+audio.pause();
+audio.currentTime = 0;
+}
+}
+</script></div> 
+<hr>
+<div id="infos">
+<h3> A lire aussi: </h3>
+<ul>
+<li> <a href="videos.html">Mes vidéos</a> </li>
+<li> <a href="passions.html">Mes passions</a> </li>
+<!--j'insère des liens externes -->	
+<li> <a href="https://www.ugc.fr/cinema.html?id=52" target="_blank">Actualité CINEMA</a> </li>
+<li> <a href="https://numero.com/culture/musique/billie-eilish-tout-ce-que-lon-sait-sur-son-nouvel-album-hit-me-hard-and-soft/" target="_blank">Hit Me Hard and Soft</a> </li>
+</ul>
+</div>
+</div> <br/> 
+<!--en dessous de mon pied de page-->
+<div id="pied-de-page">
+<p> Projet SNT - Dernière mise à jour : 27/02/2026 <br/>
+
+		Les textes et images utilisés n'engagent que son auteur : Angus Malara-Mehnaoui</p>
+</div> <br/> 
+
+</body>
+
+</html>
+
+ 
